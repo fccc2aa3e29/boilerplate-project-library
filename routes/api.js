@@ -99,7 +99,7 @@ module.exports = function (app) {
       db.collection('books').deleteOne({_id: ObjectId(bookid)}, (err, data) => {
         if (err) res.send("error");
         if (!data) res.send("no book exists");
-        res.send("delete successful");
+        else res.send("delete successful");
       });
     });  
   });
